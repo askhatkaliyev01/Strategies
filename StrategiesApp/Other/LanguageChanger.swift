@@ -2,8 +2,8 @@
 //  LanguageChanger.swift
 //  StrategiesApp
 //
-//  Created by Yerassyl Yerlanov on 29.01.2018.
-//  Copyright © 2018 AceLight. All rights reserved.
+//  Created by Askhat Kaliyev on 29.01.2018.
+//  Copyright © 2018 AKKU. All rights reserved.
 //
 
 import UIKit

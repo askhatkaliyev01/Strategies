@@ -3,7 +3,7 @@
 //  StrategiesApp
 //
 //  Created by Askhat on 24.01.2018.
-//  Copyright © 2018 AceLight. All rights reserved.
+//  Copyright © 2018 AKKU. All rights reserved.
 //
 
 import UIKit

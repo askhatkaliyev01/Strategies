@@ -2,7 +2,7 @@
 //  MainDB.swift
 //  UniversitiesOfTheSpiritApp
 //
-//  Created by Yerassyl Yerlanov on 12.10.17.
+//  Created by Askhat Kaliyev on 12.10.17.
 //  Copyright © 2017 Kumara Creations. All rights reserved.
 //
 

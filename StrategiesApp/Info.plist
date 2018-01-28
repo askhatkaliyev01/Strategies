@@ -22,6 +22,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ACaslonPro-Regular.otf</string>
+		<string>ACaslonPro-Italic.otf</string>
+		<string>ACaslonPro-Semibold.otf</string>
+		<string>ACaslonPro-Bold.otf</string>
+		<string>SkewerBold.otf</string>
+		<string>Rangoon.otf</string>
+		<string>Finskie.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -42,16 +52,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>ACaslonPro-Regular.otf</string>
-		<string>ACaslonPro-Italic.otf</string>
-		<string>ACaslonPro-Semibold.otf</string>
-		<string>ACaslonPro-Bold.otf</string>
-		<string>SkewerBold.otf</string>
-		<string>Rangoon.otf</string>
-		<string>Finskie.otf</string>
 	</array>
 </dict>
 </plist>

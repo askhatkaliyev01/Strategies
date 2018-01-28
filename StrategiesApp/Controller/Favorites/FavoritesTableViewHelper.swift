@@ -2,8 +2,8 @@
 //  FavoritesTableViewHelper.swift
 //  StrategiesApp
 //
-//  Created by Yerassyl Yerlanov on 25.01.2018.
-//  Copyright © 2018 AceLight. All rights reserved.
+//  Created by Askhat Kaliyev on 25.01.2018.
+//  Copyright © 2018 AKKU. All rights reserved.
 //
 
 import UIKit
