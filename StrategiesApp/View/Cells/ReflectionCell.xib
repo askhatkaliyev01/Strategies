@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReflectionCell" rowHeight="120" id="YjI-yo-Kfr" customClass="ReflectionCell" customModule="StrategiesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YjI-yo-Kfr" id="OxX-CH-dsb">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqP-Uw-gUK">
+                        <rect key="frame" x="16" y="11" width="343" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.01176470588" green="0.15686274510000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Faf-bM-aeU">
+                        <rect key="frame" x="16" y="39.5" width="343" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.01176470588" green="0.15686274510000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dab-In-gWc">
+                        <rect key="frame" x="40" y="0.0" width="294" height="1"/>
+                        <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Emw-zb-rs5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="leading" secondItem="OxX-CH-dsb" secondAttribute="leadingMargin" id="0kI-uH-HZz"/>
+                    <constraint firstItem="dab-In-gWc" firstAttribute="leading" secondItem="OxX-CH-dsb" secondAttribute="leading" constant="40" id="7a6-fQ-L1W"/>
+                    <constraint firstItem="dab-In-gWc" firstAttribute="top" secondItem="OxX-CH-dsb" secondAttribute="top" id="AZ4-EU-WFN"/>
+                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="top" secondItem="OxX-CH-dsb" secondAttribute="topMargin" id="Jk6-dd-w8w"/>
+                    <constraint firstItem="Faf-bM-aeU" firstAttribute="leading" secondItem="OxX-CH-dsb" secondAttribute="leadingMargin" id="KGj-QH-yyd"/>
+                    <constraint firstItem="Faf-bM-aeU" firstAttribute="trailing" secondItem="OxX-CH-dsb" secondAttribute="trailingMargin" id="WTp-6q-NO1"/>
+                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="trailing" secondItem="OxX-CH-dsb" secondAttribute="trailingMargin" id="Y12-VN-UMk"/>
+                    <constraint firstItem="Faf-bM-aeU" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="OxX-CH-dsb" secondAttribute="bottomMargin" id="gSz-q5-UnK"/>
+                    <constraint firstItem="Faf-bM-aeU" firstAttribute="top" secondItem="mqP-Uw-gUK" secondAttribute="bottom" constant="8" id="oid-yb-jZT"/>
+                    <constraint firstItem="dab-In-gWc" firstAttribute="centerX" secondItem="OxX-CH-dsb" secondAttribute="centerX" id="tok-Tr-Dlh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoLbl" destination="Faf-bM-aeU" id="zaa-Ry-TOi"/>
+                <outlet property="titleLbl" destination="mqP-Uw-gUK" id="0U6-Nx-jeA"/>
+            </connections>
+            <point key="canvasLocation" x="-22.5" y="106"/>
+        </tableViewCell>
+    </objects>
+</document>

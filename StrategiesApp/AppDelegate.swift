@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  StrategiesApp
 //
-//  Created by Yerassyl Yerlanov on 24.01.2018.
+//  Created by Ahaha on 24.01.2018.
 //  Copyright © 2018 AceLight. All rights reserved.
 //
 

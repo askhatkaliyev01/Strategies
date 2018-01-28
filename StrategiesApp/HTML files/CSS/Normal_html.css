@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*** LIGHT SIDE ***/
+
+.LightFonts {
+    font-family: "Adobe Caslon Pro";
+    font-size: 13px;
+    color: #012B41;
+    line-height: 15px;
+}
+
+.LightFontsNotes {
+    font-family: "Finskie Italic";
+    font-size: 13px;
+    color: #012B41;
+    font-style: oblique;
+    
+}
+
+.LightFontsNotesBold {
+    font-family: "Finskie Bold Italic";
+    font-size: 13px;
+    color: #012B41;
+    font-weight: bold;
+    font-style: oblique;
+    
+}
+
+.firstcharacterLight {
+    color: #6f1343;
+    float: left;
+    font-family: "Adobe Caslon Pro";
+    font-size: 35px;
+    line-height: 20px;
+    padding-top: 8px;
+    padding-right: 2px;
+    padding-left: 1px;
+}
+
+
+
+/*** DARK SIDE ***/
+
+.DarkFonts {
+    font-family: 'Skewer ';
+    font-size: 15px;
+    color: #59422b;
+    line-height: 15px;
+}
+
+.DarkFontsNotes {
+    font-family: "Rangoon";
+    font-size: 13px;
+    color: #6b553f;
+    font-style: oblique;
+    
+}
+
+.DarkFontsNotesBold {
+    font-family: "Rangoon;
+    font-size: 13px;
+    color: #6b553f;
+    font-weight: bold;
+    font-style: oblique;
+    
+}
+
+.firstcharacterDark {
+    color: #424546;
+    float: left;
+    font-family: 'Skewer';
+    font-size: 40px;
+    line-height: 20px;
+    padding-top: 8px;
+    padding-right: 2px;
+    padding-left: 3px;
+}
+
+
+
+
+

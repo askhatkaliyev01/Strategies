@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Strategies</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -40,6 +42,16 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>ACaslonPro-Regular.otf</string>
+		<string>ACaslonPro-Italic.otf</string>
+		<string>ACaslonPro-Semibold.otf</string>
+		<string>ACaslonPro-Bold.otf</string>
+		<string>SkewerBold.otf</string>
+		<string>Rangoon.otf</string>
+		<string>Finskie.otf</string>
 	</array>
 </dict>
 </plist>
