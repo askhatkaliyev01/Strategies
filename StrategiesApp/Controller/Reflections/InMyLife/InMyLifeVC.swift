@@ -71,4 +71,9 @@ class InMyLifeVC: UIViewController,UITextViewDelegate {
         }
         return true
     }
+    
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
 }

@@ -129,9 +129,11 @@ class ReflectionVC: UIViewController,InMyLifeDelegate,EffectDelegate,PlanDelegat
         self.present(pv, animated: true, completion: nil)
     }
     
-    override var shouldAutorotate: Bool {
-        return false
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
+
 
     
     // Delegates

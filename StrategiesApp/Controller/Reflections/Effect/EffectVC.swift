@@ -110,4 +110,9 @@ class EffectVC: UIViewController {
         return res
     }
 
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
 }

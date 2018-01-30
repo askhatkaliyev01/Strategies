@@ -25,7 +25,7 @@ class CardsPageVC: UIPageViewController {
     }
     
     var currentIndex:Int = 0
-    var isLight:Bool = true
+    var isLight:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,34 @@ class CardsPageVC: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(setScrollable), name: NSNotification.Name(rawValue: "SetScrollable"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setUnscrollable), name: NSNotification.Name(rawValue: "SetUnscrollable"), object: nil)
     }
+    
+    @objc func setScrollable() {
+        for view in view.subviews {
+            if let subView = view as? UIScrollView {
+                subView.isScrollEnabled = true
+            }
+        }
+    }
+    @objc func setUnscrollable() {
+        for view in view.subviews {
+            if let subView = view as? UIScrollView {
+                subView.isScrollEnabled = false
+            }
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "SetScrollable"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "SetUnscrollable"), object: nil)
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
 }
 
 extension CardsPageVC: UIPageViewControllerDataSource {

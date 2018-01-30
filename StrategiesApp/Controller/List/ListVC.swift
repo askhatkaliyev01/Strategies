@@ -52,7 +52,7 @@ class ListVC: UIViewController,ListTableViewHelperDelegate {
             self.present(iv, animated: true, completion: nil)
         }
     }
-    override var shouldAutorotate: Bool {
-        return false
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
 }

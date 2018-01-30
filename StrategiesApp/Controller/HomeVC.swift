@@ -32,7 +32,9 @@ class HomeVC: UIViewController {
         let rv:ReflectionsVC = self.storyboard!.instantiateViewController(withIdentifier: "ReflectionsVC") as! ReflectionsVC
         self.present(rv, animated: true, completion: nil)
     }
-    override var shouldAutorotate: Bool {
-        return false
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
+
 }

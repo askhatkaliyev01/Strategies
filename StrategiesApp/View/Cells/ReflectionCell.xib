@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqP-Uw-gUK">
-                        <rect key="frame" x="16" y="11" width="343" height="20.5"/>
+                        <rect key="frame" x="16" y="11" width="343" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.01176470588" green="0.15686274510000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -38,25 +38,50 @@
                             <constraint firstAttribute="height" constant="1" id="Emw-zb-rs5"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="delete" translatesAutoresizingMaskIntoConstraints="NO" id="bsB-WL-IL6">
+                        <rect key="frame" x="-39" y="39" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="E7E-WP-t8Y"/>
+                            <constraint firstAttribute="height" constant="40" id="et8-em-Wge"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="396-aL-3uu">
+                        <rect key="frame" x="-50" y="8" width="58" height="104.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="nJe-5r-J5p"/>
+                        </constraints>
+                        <connections>
+                            <action selector="deleteBtnTouched:" destination="YjI-yo-Kfr" eventType="touchUpInside" id="Dr0-HM-B5s"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="leading" secondItem="OxX-CH-dsb" secondAttribute="leadingMargin" id="0kI-uH-HZz"/>
                     <constraint firstItem="dab-In-gWc" firstAttribute="leading" secondItem="OxX-CH-dsb" secondAttribute="leading" constant="40" id="7a6-fQ-L1W"/>
                     <constraint firstItem="dab-In-gWc" firstAttribute="top" secondItem="OxX-CH-dsb" secondAttribute="top" id="AZ4-EU-WFN"/>
+                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="width" secondItem="OxX-CH-dsb" secondAttribute="width" constant="-32" id="Fye-OV-EsV"/>
+                    <constraint firstItem="Faf-bM-aeU" firstAttribute="centerX" secondItem="mqP-Uw-gUK" secondAttribute="centerX" id="J8A-AO-8dk"/>
                     <constraint firstItem="mqP-Uw-gUK" firstAttribute="top" secondItem="OxX-CH-dsb" secondAttribute="topMargin" id="Jk6-dd-w8w"/>
-                    <constraint firstItem="Faf-bM-aeU" firstAttribute="leading" secondItem="OxX-CH-dsb" secondAttribute="leadingMargin" id="KGj-QH-yyd"/>
-                    <constraint firstItem="Faf-bM-aeU" firstAttribute="trailing" secondItem="OxX-CH-dsb" secondAttribute="trailingMargin" id="WTp-6q-NO1"/>
-                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="trailing" secondItem="OxX-CH-dsb" secondAttribute="trailingMargin" id="Y12-VN-UMk"/>
+                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="leading" secondItem="396-aL-3uu" secondAttribute="trailing" constant="8" id="VTd-NR-PwY"/>
+                    <constraint firstAttribute="bottom" secondItem="396-aL-3uu" secondAttribute="bottom" constant="7" id="b2f-Pc-jVr"/>
+                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="leading" secondItem="bsB-WL-IL6" secondAttribute="trailing" constant="15" id="eZ2-zE-kAP"/>
                     <constraint firstItem="Faf-bM-aeU" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="OxX-CH-dsb" secondAttribute="bottomMargin" id="gSz-q5-UnK"/>
                     <constraint firstItem="Faf-bM-aeU" firstAttribute="top" secondItem="mqP-Uw-gUK" secondAttribute="bottom" constant="8" id="oid-yb-jZT"/>
+                    <constraint firstItem="Faf-bM-aeU" firstAttribute="width" secondItem="mqP-Uw-gUK" secondAttribute="width" id="r6F-lv-mHG"/>
+                    <constraint firstItem="396-aL-3uu" firstAttribute="top" secondItem="dab-In-gWc" secondAttribute="bottom" constant="7" id="riB-ah-k4w"/>
+                    <constraint firstItem="mqP-Uw-gUK" firstAttribute="leading" secondItem="OxX-CH-dsb" secondAttribute="leading" constant="16" id="t1o-ZZ-Y4P"/>
                     <constraint firstItem="dab-In-gWc" firstAttribute="centerX" secondItem="OxX-CH-dsb" secondAttribute="centerX" id="tok-Tr-Dlh"/>
+                    <constraint firstItem="bsB-WL-IL6" firstAttribute="centerY" secondItem="OxX-CH-dsb" secondAttribute="centerY" id="xhn-6x-rql"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="deleteConst" destination="t1o-ZZ-Y4P" id="4B5-fl-Xgw"/>
                 <outlet property="infoLbl" destination="Faf-bM-aeU" id="zaa-Ry-TOi"/>
                 <outlet property="titleLbl" destination="mqP-Uw-gUK" id="0U6-Nx-jeA"/>
             </connections>
             <point key="canvasLocation" x="-22.5" y="106"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="delete" width="64" height="64"/>
+    </resources>
 </document>

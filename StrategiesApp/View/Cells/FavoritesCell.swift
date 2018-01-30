@@ -13,6 +13,7 @@ class FavoritesCell: MGSwipeTableCell {
 
     @IBOutlet weak var imgV: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var deleteConst: NSLayoutConstraint!
     
     @IBOutlet weak var infoLbl: UILabel!
     
@@ -22,7 +23,27 @@ class FavoritesCell: MGSwipeTableCell {
         self.backgroundColor = .clear
         self.imgV.backgroundColor = Helper.rgba(red: 66, green: 29, blue: 29, alpha: 1)
     }
+    
+    @objc func showDeleteButton() {
+        UIView.animate(withDuration: 0.3) {
+            self.deleteConst.constant = 70.0
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+        }
+    }
+    
+    @objc func hideDeleteButton() {
+        UIView.animate(withDuration: 0.3) {
+            self.deleteConst.constant = 8.0
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
+        }
+    }
 
+    @IBAction func deleteBtnTouched(_ sender: Any) {
+        self.showSwipe(.rightToLeft, animated: true)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

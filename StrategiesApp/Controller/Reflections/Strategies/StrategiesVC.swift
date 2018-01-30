@@ -55,7 +55,7 @@ class StrategiesVC: UIViewController,StrategiesTableViewHelperDelegate {
         let iv:InMyLifeVC = self.storyboard!.instantiateViewController(withIdentifier: "InMyLifeVC") as! InMyLifeVC
         let dd = NSMutableDictionary()
         dd["strategy"] = mainDB.getDarkSide(index: selectedStrategy)
-        dd["id"] = random()
+        dd["id"] = "\(selectedStrategy+1)"
         iv.reflection = dd
         self.present(iv, animated: true, completion: nil)
     }
@@ -78,8 +78,9 @@ class StrategiesVC: UIViewController,StrategiesTableViewHelperDelegate {
         nextBtn.isHidden = false
     }
     
-    override var shouldAutorotate: Bool {
-        return false
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
 
 }

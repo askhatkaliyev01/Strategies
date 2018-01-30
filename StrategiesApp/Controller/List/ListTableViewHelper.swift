@@ -95,8 +95,10 @@ class ListTableViewHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.row < cells.count {
-            delegate?.tableSelected(withIndex: indexPath.row, title: cells.object(at: indexPath.row) as! String)
+        DispatchQueue.main.async {
+            if indexPath.row < self.cells.count {
+                self.delegate?.tableSelected(withIndex: indexPath.row, title: self.cells.object(at: indexPath.row) as! String)
+            }
         }
     }
 }

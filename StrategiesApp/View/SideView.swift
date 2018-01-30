@@ -97,7 +97,8 @@ class SideView: UIView,UIWebViewDelegate {
         scrollView.addSubview(titleLbl)
   
         
-        let path:String = Bundle.main.path(forResource: "Light_html_01", ofType: "html")!
+        let path:String = Bundle.main.path(forResource: String(format: "Light_html_%02d",  Int("\(info["number"]!)")!), ofType: "html")!
+
         let readHandle:FileHandle = FileHandle.init(forReadingAtPath: path)!
         var htmlString:String = String.init(data: readHandle.readDataToEndOfFile(), encoding:String.Encoding.utf8)!
         if mainDB.isTextBig() {
@@ -163,7 +164,7 @@ class SideView: UIView,UIWebViewDelegate {
         scrollView.addSubview(titleLbl)
         
         
-        let path:String = Bundle.main.path(forResource: "Dark_html_01", ofType: "html")!
+        let path:String = Bundle.main.path(forResource: String(format: "Dark_html_%02d",  Int("\(info["number"]!)")!), ofType: "html")!
         let readHandle:FileHandle = FileHandle.init(forReadingAtPath: path)!
         var htmlString:String = String.init(data: readHandle.readDataToEndOfFile(), encoding:String.Encoding.utf8)!
         if mainDB.isTextBig() {
@@ -195,6 +196,10 @@ class SideView: UIView,UIWebViewDelegate {
             
             scrollView.contentSize = CGSize(width:Helper.scn_width,height:webView.frame.origin.y+webView.frame.size.height+16.0)
         }
+    }
+    
+    func goTop() {
+        scrollView.scrollRectToVisible(CGRect(x:0,y:0,width:Helper.scn_width,height:Helper.scn_height-80.0), animated: false)
     }
     
     // MARK: - UIWebViewDelegate

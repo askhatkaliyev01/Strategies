@@ -15,14 +15,28 @@ import MGSwipeTableCell
 
 class StrategiesTableViewHelper: NSObject,UITableViewDelegate,UITableViewDataSource {
     var tableView: UITableView!
-    var cells: NSArray!
+    var cells: NSMutableArray!
     var selectedStrategy:Int = -1
     var mainDB = MainDB()
 
     weak var delegate: StrategiesTableViewHelperDelegate?
     
     func initialize(tableView: UITableView!) {
-        cells = mainDB.getAllDarkSides()
+        cells = NSMutableArray.init(array: mainDB.getAllDarkSides())
+        let secArr = mainDB.getAllReflections()
+        for el in secArr {
+            let dd:NSDictionary = el as! NSDictionary
+            for i in 0 ..< cells.count {
+                let curD = cells[i] as! NSDictionary
+                let str1 = dd["id"] as! String
+                let str2 = curD["number"] as! String
+                print("\(str1) == \(str2)")
+                if str1 == str2 {
+                    cells.removeObject(at: i)
+                    break
+                }
+            }
+        }
         
         self.tableView = tableView
         self.initTableView()
@@ -62,7 +76,7 @@ class StrategiesTableViewHelper: NSObject,UITableViewDelegate,UITableViewDataSou
         }
         
         let dic:NSDictionary! = cells.object(at: indexPath.row) as! NSDictionary
-        cell?.titleLbl.text = "\(mainDB.translateString(str: "Strategy")) \(indexPath.row+1)"
+        cell?.titleLbl.text = "\(mainDB.translateString(str: "Strategy")) \(dic.object(forKey: "number") as! String)"
         cell?.infoLbl.text = dic.object(forKey: "title") as? String
         
         mainDB.setTitleStyle(lbl: (cell?.titleLbl)!)
@@ -78,7 +92,9 @@ class StrategiesTableViewHelper: NSObject,UITableViewDelegate,UITableViewDataSou
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row < cells.count {
             selectedStrategy = indexPath.row
-            delegate?.tableSelected(withIndex: indexPath.row)
+            let dic:NSDictionary! = cells.object(at: indexPath.row) as! NSDictionary
+
+            delegate?.tableSelected(withIndex: Int("\(dic.object(forKey: "number") as! String)")!-1)
         }
     }
 }

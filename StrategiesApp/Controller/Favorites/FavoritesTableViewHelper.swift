@@ -79,24 +79,21 @@ class FavoritesTableViewHelper: NSObject,UITableViewDelegate,UITableViewDataSour
         mainDB.setTextStyle(lbl: (cell?.infoLbl)!)
         
         if editButtonTouched {
+            cell?.showDeleteButton()
             //configure left buttons
             let delBtn = MGSwipeButton(title: mainDB.translateString(str: "Delete"), icon: nil, backgroundColor: Helper.rgba(red: 255, green: 51, blue: 43, alpha: 1)) {
                 (sender: MGSwipeTableCell!) -> Bool in
                 self.deleteFavoriteRow(index: indexPath.row)
                 return true
             }
-            let del1Btn = MGSwipeButton(title: "", icon: UIImage(named:"delete"), backgroundColor: .clear) {
-                (sender: MGSwipeTableCell!) -> Bool in
-                self.deleteFavoriteRow(index: indexPath.row)
-                return true
-            }
             
-            cell?.leftButtons = [del1Btn]
+            cell?.leftButtons = []
             cell?.rightButtons = [delBtn]
-            cell?.leftSwipeSettings.transition = .drag
+            cell?.leftSwipeSettings.transition = .static
             cell?.rightSwipeSettings.transition = .drag
         }
         else {
+            cell?.hideDeleteButton()
             cell?.leftButtons = []
             cell?.rightButtons = []
         }

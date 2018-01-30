@@ -143,4 +143,10 @@ class SettingsVC: UIViewController {
         }
         initText()
     }
+    
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
 }

@@ -65,14 +65,15 @@ class FavoritesVC: UIViewController,FavoritesTableViewHelperDelegate {
     func tableSelected(cardIndex: Int, isLight: Bool) {
 
         let cv:CardsPageVC = self.storyboard!.instantiateViewController(withIdentifier: "CardsPageVC") as! CardsPageVC
-        cv.isLight = isLight
+        cv.isLight = !isLight
         cv.currentIndex = cardIndex
         self.present(cv, animated: true, completion: nil)
         
     }
     
-    override var shouldAutorotate: Bool {
-        return false
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
 
 }

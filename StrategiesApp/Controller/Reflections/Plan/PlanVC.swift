@@ -90,4 +90,10 @@ class PlanVC: UIViewController,UITextViewDelegate {
         arr.add(reflection)
         mainDB.setReflections(reflections: arr)
     }
+    
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
 }

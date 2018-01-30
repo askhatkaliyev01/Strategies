@@ -86,10 +86,11 @@ class ReflectionsVC: UIViewController,ReflectionsTableViewHelperDelegate,Getting
         rv.reflection = reflection
         self.present(rv, animated: true, completion: nil)
     }
-    
-    override var shouldAutorotate: Bool {
-        return false
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
+
 
     // MARK: GettingSeriousViewDelegate
     func nextTouched(with: Int) {

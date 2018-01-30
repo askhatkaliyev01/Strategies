@@ -74,7 +74,9 @@ class InfoVC: UIViewController {
     @IBAction func backBtnTouched(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    override var shouldAutorotate: Bool {
-        return false
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
+
 }

@@ -70,24 +70,23 @@ class ReflectionsTableViewHelper: NSObject,UITableViewDelegate,UITableViewDataSo
         mainDB.setTextStyle(lbl: (cell?.infoLbl)!)
         
         if editButtonTouched {
+            cell?.showDeleteButton()
+
             //configure left buttons
             let delBtn = MGSwipeButton(title: mainDB.translateString(str: "Delete"), icon: nil, backgroundColor: Helper.rgba(red: 255, green: 51, blue: 43, alpha: 1)) {
                 (sender: MGSwipeTableCell!) -> Bool in
                 self.deleteFavoriteRow(index: indexPath.row)
                 return true
             }
-            let del1Btn = MGSwipeButton(title: "", icon: UIImage(named:"delete"), backgroundColor: .clear) {
-                (sender: MGSwipeTableCell!) -> Bool in
-                self.deleteFavoriteRow(index: indexPath.row)
-                return true
-            }
             
-            cell?.leftButtons = [del1Btn]
+            cell?.leftButtons = []
             cell?.rightButtons = [delBtn]
             cell?.leftSwipeSettings.transition = .drag
             cell?.rightSwipeSettings.transition = .drag
         }
         else {
+            cell?.hideDeleteButton()
+
             cell?.leftButtons = []
             cell?.rightButtons = []
         }
@@ -100,10 +99,12 @@ class ReflectionsTableViewHelper: NSObject,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if indexPath.row < cells.count {
-            if delegate != nil {
-                let ref:NSMutableDictionary = NSMutableDictionary.init(dictionary: cells.object(at: indexPath.row) as! NSDictionary)
-                delegate?.tableSelected(reflection: ref)
+        DispatchQueue.main.async {
+            if indexPath.row < self.cells.count {
+                if self.delegate != nil {
+                    let ref:NSMutableDictionary = NSMutableDictionary.init(dictionary: self.cells.object(at: indexPath.row) as! NSDictionary)
+                    self.delegate?.tableSelected(reflection: ref)
+                }
             }
         }
     }

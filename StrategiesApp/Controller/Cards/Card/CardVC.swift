@@ -12,10 +12,13 @@ class CardVC: UIViewController,SideViewDelegate {
 
     var cardIndex:Int! = 0
     
-    var darkShown:Bool = false
+    var darkShown:Bool = true
     var darkSide:SideView! = nil
     var lightSide:SideView! = nil
     var mainDB:MainDB! = nil
+    
+    @IBOutlet weak var leftImgV: UIImageView!
+    @IBOutlet weak var rightImgV: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +41,15 @@ class CardVC: UIViewController,SideViewDelegate {
 
         if !darkShown {
             darkSide.isHidden = true
+            leftImgV.isHidden = true
+            rightImgV.isHidden = true
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SetUnscrollable"), object: nil)
         }
         else {
             lightSide.isHidden = true
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SetScrollable"), object: nil)
         }
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -52,18 +60,33 @@ class CardVC: UIViewController,SideViewDelegate {
             self.lightSide.updateWebViewFrame()
         })
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        lightSide.goTop()
+        darkSide.goTop()
+    }
     
     @IBAction func upBtnTouched(_ sender: Any) {
         if darkShown {
             darkShown = false
             darkSide.isHidden = true
             lightSide.isHidden = false
+            
+            leftImgV.isHidden = true
+            rightImgV.isHidden = true
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SetUnscrollable"), object: nil)
         }
         else {
             darkShown = true
             darkSide.isHidden = false
             lightSide.isHidden = true
+            
+            leftImgV.isHidden = false
+            rightImgV.isHidden = false
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "SetScrollable"), object: nil)
         }
+        lightSide.goTop()
+        darkSide.goTop()
     }
     
     // MARK: - SideViewDelegate
@@ -72,5 +95,9 @@ class CardVC: UIViewController,SideViewDelegate {
     }
     func likeTouched() {
         
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
     }
 }
