@@ -82,9 +82,11 @@ class ReflectionsVC: UIViewController,ReflectionsTableViewHelperDelegate,Getting
     
     // MARK: ReflectionsTableViewHelperDelegate
     func tableSelected(reflection: NSMutableDictionary) {
-        let rv:ReflectionVC = self.storyboard!.instantiateViewController(withIdentifier: "ReflectionVC") as! ReflectionVC
-        rv.reflection = reflection
-        self.present(rv, animated: true, completion: nil)
+        if editButtonTouched == false {
+            let rv:ReflectionVC = self.storyboard!.instantiateViewController(withIdentifier: "ReflectionVC") as! ReflectionVC
+            rv.reflection = reflection
+            self.present(rv, animated: true, completion: nil)
+        }
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

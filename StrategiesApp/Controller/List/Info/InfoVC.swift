@@ -58,6 +58,11 @@ class InfoVC: UIViewController {
                     st = st.replacingOccurrences(of: "<BOLD>", with: "")
                     mainDB.setBoldTextStyle(lbl: lbl)
                     lbl.textAlignment = .center
+                    
+                    if st.range(of: "<LEFT>") != nil {
+                        st = st.replacingOccurrences(of: "<LEFT>", with: "")
+                        lbl.textAlignment = .left
+                    }
                 }
                 
                 lbl.textColor = Helper.rgba(red: 3, green: 40, blue: 58, alpha: 1)

@@ -39,9 +39,6 @@ class GettingSeriousView: UIView {
         nextBtn.layer.borderWidth = 1
         nextBtn.layer.borderColor = Helper.rgba(red: 3, green: 40, blue: 58, alpha: 1).cgColor
         
-        dontShowBtn.layer.cornerRadius = 3
-        dontShowBtn.layer.borderWidth = 1
-        dontShowBtn.layer.borderColor = Helper.rgba(red: 3, green: 40, blue: 58, alpha: 1).cgColor
         dontShowBtn.tag = 0
         
         self.initText()
@@ -59,12 +56,12 @@ class GettingSeriousView: UIView {
     @IBAction func dontShowBtnTouched(_ sender: Any) {
         if dontShowBtn.tag == 0 {
             dontShowBtn.tag = 1
-            dontShowBtn.backgroundColor = Helper.rgba(red: 3, green: 40, blue: 58, alpha: 1)
+            dontShowBtn.setImage(UIImage(named:"Dont_Show_Me_Again_Checkmake"), for: .normal)
             mainDB.setDontShowAgain(isShow: true)
         }
         else {
             dontShowBtn.tag = 0
-            dontShowBtn.backgroundColor = .clear
+            dontShowBtn.setImage(UIImage(named:"Don't_show_again_square_icon"), for: .normal)
             mainDB.setDontShowAgain(isShow: false)
         }
     }

@@ -80,7 +80,10 @@ extension CardsPageVC: UIPageViewControllerDataSource {
             return nil
         }
         
-        let previousIndex = viewControllerIndex - 1
+        var previousIndex = viewControllerIndex - 1
+        if previousIndex == -1 {
+            previousIndex = orderedViewControllers.count-1
+        }
         
         guard previousIndex >= 0 else {
             return nil
@@ -101,7 +104,10 @@ extension CardsPageVC: UIPageViewControllerDataSource {
             return nil
         }
         
-        let nextIndex = viewControllerIndex + 1
+        var nextIndex = viewControllerIndex + 1
+        if nextIndex == orderedViewControllers.count {
+            nextIndex = 0
+        }
         let orderedViewControllersCount = orderedViewControllers.count
         
         guard orderedViewControllersCount != nextIndex else {

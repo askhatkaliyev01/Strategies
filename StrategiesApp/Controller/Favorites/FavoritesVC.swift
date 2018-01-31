@@ -63,12 +63,12 @@ class FavoritesVC: UIViewController,FavoritesTableViewHelperDelegate {
     
     // MARK: FavoritesTableViewHelperDelegate
     func tableSelected(cardIndex: Int, isLight: Bool) {
-
-        let cv:CardsPageVC = self.storyboard!.instantiateViewController(withIdentifier: "CardsPageVC") as! CardsPageVC
-        cv.isLight = !isLight
-        cv.currentIndex = cardIndex
-        self.present(cv, animated: true, completion: nil)
-        
+        if editButtonTouched == false {
+            let cv:CardsPageVC = self.storyboard!.instantiateViewController(withIdentifier: "CardsPageVC") as! CardsPageVC
+            cv.isLight = !isLight
+            cv.currentIndex = cardIndex
+            self.present(cv, animated: true, completion: nil)
+        }
     }
     
 

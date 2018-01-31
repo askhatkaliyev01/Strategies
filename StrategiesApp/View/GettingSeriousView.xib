@@ -56,12 +56,13 @@
                     <color key="textColor" red="0.01176470588" green="0.15686274510000001" blue="0.2274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fq-he-SiQ">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fq-he-SiQ">
                     <rect key="frame" x="94" y="610.5" width="30" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="U44-SM-GXw"/>
                         <constraint firstAttribute="height" constant="35" id="gI3-9P-gQy"/>
                     </constraints>
+                    <state key="normal" image="Don't_show_again_square_icon"/>
                     <connections>
                         <action selector="dontShowBtnTouched:" destination="7Qn-o8-ZC2" eventType="touchUpInside" id="CVG-zn-AWk"/>
                     </connections>
@@ -96,4 +97,7 @@
             <point key="canvasLocation" x="-7" y="-232"/>
         </view>
     </objects>
+    <resources>
+        <image name="Don't_show_again_square_icon" width="22" height="25"/>
+    </resources>
 </document>
