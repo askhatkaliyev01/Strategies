@@ -15,13 +15,13 @@ class LanguageChanger: NSObject {
         var fileName = "DBase"
         
         if MainDB.getCurrentLanguage() == "sp" {
-            fileName = "DBase"
+            fileName = "SpDBase"
         }
         else if MainDB.getCurrentLanguage() == "ru" {
-            fileName = "DBase"
+            fileName = "RuDBase"
         }
         else if MainDB.getCurrentLanguage() == "po" {
-            fileName = "DBase"
+            fileName = "PoDBase"
         }
         
         var myDict: NSDictionary?

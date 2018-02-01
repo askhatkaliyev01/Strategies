@@ -74,6 +74,9 @@
 		87830CD72020FFE4002320E2 /* Dark_html_22.html in Resources */ = {isa = PBXBuildFile; fileRef = 87830CD52020FFE3002320E2 /* Dark_html_22.html */; };
 		87830CD82020FFE4002320E2 /* Dark_html_21.html in Resources */ = {isa = PBXBuildFile; fileRef = 87830CD62020FFE3002320E2 /* Dark_html_21.html */; };
 		87830CDA2020FFF4002320E2 /* Dark_html_31.html in Resources */ = {isa = PBXBuildFile; fileRef = 87830CD92020FFF4002320E2 /* Dark_html_31.html */; };
+		87830CE220231041002320E2 /* PoDBase.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87830CDF20231041002320E2 /* PoDBase.plist */; };
+		87830CE320231041002320E2 /* SpDBase.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87830CE020231041002320E2 /* SpDBase.plist */; };
+		87830CE420231041002320E2 /* RuDBase.plist in Resources */ = {isa = PBXBuildFile; fileRef = 87830CE120231041002320E2 /* RuDBase.plist */; };
 		87DF1AA32018930000EA04B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87DF1AA22018930000EA04B7 /* AppDelegate.swift */; };
 		87DF1AA82018930000EA04B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87DF1AA62018930000EA04B7 /* Main.storyboard */; };
 		87DF1AAA2018930000EA04B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87DF1AA92018930000EA04B7 /* Assets.xcassets */; };
@@ -195,6 +198,9 @@
 		87830CD52020FFE3002320E2 /* Dark_html_22.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Dark_html_22.html; sourceTree = "<group>"; };
 		87830CD62020FFE3002320E2 /* Dark_html_21.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Dark_html_21.html; sourceTree = "<group>"; };
 		87830CD92020FFF4002320E2 /* Dark_html_31.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Dark_html_31.html; sourceTree = "<group>"; };
+		87830CDF20231041002320E2 /* PoDBase.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PoDBase.plist; sourceTree = "<group>"; };
+		87830CE020231041002320E2 /* SpDBase.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpDBase.plist; sourceTree = "<group>"; };
+		87830CE120231041002320E2 /* RuDBase.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RuDBase.plist; sourceTree = "<group>"; };
 		87DF1A9F2018930000EA04B7 /* StrategiesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrategiesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87DF1AA22018930000EA04B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87DF1AA72018930000EA04B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -341,6 +347,9 @@
 				87DF1AAB2018930000EA04B7 /* LaunchScreen.storyboard */,
 				87DF1AAE2018930000EA04B7 /* Info.plist */,
 				87DF1AD02018A34700EA04B7 /* DBase.plist */,
+				87830CDF20231041002320E2 /* PoDBase.plist */,
+				87830CE120231041002320E2 /* RuDBase.plist */,
+				87830CE020231041002320E2 /* SpDBase.plist */,
 				87DF1B1A201E476100EA04B7 /* Fonts */,
 				87DF1B14201D0C7100EA04B7 /* HTML files */,
 			);
@@ -663,6 +672,7 @@
 				87830CD22020FFC8002320E2 /* Dark_html_11.html in Resources */,
 				87830C372020FDEC002320E2 /* Light_html_28.html in Resources */,
 				87830CB92020FE4C002320E2 /* Dark_html_32.html in Resources */,
+				87830CE220231041002320E2 /* PoDBase.plist in Resources */,
 				87830CCE2020FE4C002320E2 /* Dark_html_28.html in Resources */,
 				87830C472020FDEC002320E2 /* Light_html_25.html in Resources */,
 				87DF1B0F201A722D00EA04B7 /* GettingSeriousView.xib in Resources */,
@@ -705,6 +715,7 @@
 				87830CB42020FE4C002320E2 /* Dark_html_20.html in Resources */,
 				87830CBB2020FE4C002320E2 /* Dark_html_27.html in Resources */,
 				87DF1ACA20189E3500EA04B7 /* KumaraCell.xib in Resources */,
+				87830CE420231041002320E2 /* RuDBase.plist in Resources */,
 				87830C552020FDEC002320E2 /* Light_html_14.html in Resources */,
 				87830C3A2020FDEC002320E2 /* Light_html_23.html in Resources */,
 				87DF1AD12018A34700EA04B7 /* DBase.plist in Resources */,
@@ -723,6 +734,7 @@
 				87830C442020FDEC002320E2 /* Light_html_17.html in Resources */,
 				87830CD72020FFE4002320E2 /* Dark_html_22.html in Resources */,
 				87830C512020FDEC002320E2 /* Light_html_13.html in Resources */,
+				87830CE320231041002320E2 /* SpDBase.plist in Resources */,
 				87DF1AF3201A37E900EA04B7 /* ReflectionCell.xib in Resources */,
 				87830CB52020FE4C002320E2 /* Dark_html_16.html in Resources */,
 				87830C3D2020FDEC002320E2 /* Light_html_19.html in Resources */,

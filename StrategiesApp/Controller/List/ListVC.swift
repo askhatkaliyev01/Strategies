@@ -25,6 +25,8 @@ class ListVC: UIViewController,ListTableViewHelperDelegate {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        mainDB = MainDB()
+        listTableViewHelper.mainDB = MainDB()
         tableView.reloadData()
     }
     
