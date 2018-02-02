@@ -97,7 +97,7 @@ class SideView: UIView,UIWebViewDelegate {
         scrollView.addSubview(titleLbl)
   
         
-        let path:String = Bundle.main.path(forResource: String(format: "Light_html_%02d",  Int("\(info["number"]!)")!), ofType: "html")!
+        let path:String = Bundle.main.path(forResource: String(format: "%@%02d", MainDB.getCurrentLightHtml(),  Int("\(info["number"]!)")!), ofType: "html")!
 
         let readHandle:FileHandle = FileHandle.init(forReadingAtPath: path)!
         var htmlString:String = String.init(data: readHandle.readDataToEndOfFile(), encoding:String.Encoding.utf8)!
@@ -164,7 +164,7 @@ class SideView: UIView,UIWebViewDelegate {
         scrollView.addSubview(titleLbl)
         
         
-        let path:String = Bundle.main.path(forResource: String(format: "Dark_html_%02d",  Int("\(info["number"]!)")!), ofType: "html")!
+        let path:String = Bundle.main.path(forResource: String(format: "%@%02d", MainDB.getCurrentDarkHtml(),  Int("\(info["number"]!)")!), ofType: "html")!
         let readHandle:FileHandle = FileHandle.init(forReadingAtPath: path)!
         var htmlString:String = String.init(data: readHandle.readDataToEndOfFile(), encoding:String.Encoding.utf8)!
         if mainDB.isTextBig() {

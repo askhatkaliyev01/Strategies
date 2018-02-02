@@ -223,4 +223,31 @@ class MainDB: NSObject {
         lbl.textColor = Helper.rgba(red: 89, green: 66, blue: 43, alpha: 1)
     }
     
+    
+    static func getCurrentLightHtml() -> String {
+        var fileName = "Light_html_"
+        if MainDB.getCurrentLanguage() == "sp" {
+            fileName = "SpLight_html_"
+        }
+        else if MainDB.getCurrentLanguage() == "ru" {
+            fileName = "RuLight_html_"
+        }
+        else if MainDB.getCurrentLanguage() == "po" {
+            fileName = "PoLight_html_"
+        }
+        return fileName
+    }
+    static func getCurrentDarkHtml() -> String {
+        var fileName = "Dark_html_"
+        if MainDB.getCurrentLanguage() == "sp" {
+            fileName = "SpDark_html_"
+        }
+        else if MainDB.getCurrentLanguage() == "ru" {
+            fileName = "RuDark_html_"
+        }
+        else if MainDB.getCurrentLanguage() == "po" {
+            fileName = "PoDark_html_"
+        }
+        return fileName
+    }
 }
